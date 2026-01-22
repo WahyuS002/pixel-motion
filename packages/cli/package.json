@@ -1,0 +1,33 @@
+{
+  "name": "pixel-motion",
+  "version": "1.2.1",
+  "description": "CLI for adding Motion Canvas components to your project",
+  "type": "module",
+  "bin": {
+    "pixel-motion": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm --watch",
+    "build": "tsup src/index.ts --format esm --dts"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0",
+    "prompts": "^2.4.2",
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^3.3.0",
+    "cosmiconfig": "^9.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "@types/fs-extra": "^11.0.0",
+    "@types/prompts": "^2.4.0"
+  }
+}
