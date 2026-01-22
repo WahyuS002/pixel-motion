@@ -15,5 +15,8 @@
   },
   "packageManager": "pnpm@9.0.0",
   "author": "Wahyu Syahputra",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8"
+  }
 }

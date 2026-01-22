@@ -1,8 +1,21 @@
 {
   "name": "pixel-motion",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "description": "CLI for adding Motion Canvas components to your project",
   "type": "module",
+  "license": "MIT",
+  "author": "Wahyu Syahputra",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wahyusyahputra/pixel-motion",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "cli",
+    "motion-canvas",
+    "animation",
+    "pixel-motion"
+  ],
   "bin": {
     "pixel-motion": "dist/index.js"
   },
