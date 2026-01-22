@@ -1,4 +1,23 @@
+# Dependencies
 node_modules
+
+# Build outputs
 dist
-.DS_Store
+.next
+.turbo
+
+# Environment
 .env
+.env.local
+.env.*.local
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+/apps/docs/public/r/
