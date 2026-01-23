@@ -3,16 +3,16 @@
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": ["DOM", "ES2020"],
     "jsx": "react-jsx",
-    "declaration": true,
-    "declarationMap": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "rootDir": "./src",
-    "outDir": "dist"
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "out"]
 }

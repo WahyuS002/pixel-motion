@@ -1,0 +1,8 @@
+# Output
+out/
+
+# Dependencies
+node_modules/
+
+# Cache
+.remotion/

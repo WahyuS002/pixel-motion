@@ -1,0 +1,21 @@
+{
+  "name": "@pixel-motion/playground",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render Main out/video.mp4",
+    "build:still": "remotion still Main out/thumbnail.png"
+  },
+  "dependencies": {
+    "@pixel-motion/components": "workspace:*",
+    "@remotion/cli": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}
