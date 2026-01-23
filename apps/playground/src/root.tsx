@@ -1,6 +1,6 @@
 import React from "react";
 import { Composition } from "remotion";
-import { Main } from "./compositions/Main";
+import { Main } from "./compositions/main";
 
 export const RemotionRoot: React.FC = () => {
   return (
