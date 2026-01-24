@@ -49,3 +49,47 @@ export function isPointInRange(point: CodePoint, range: CodeRange): boolean {
   // Within the range
   return true;
 }
+
+export function findAllCodeRanges(
+  code: string,
+  pattern: string | RegExp,
+  limit?: number
+): CodeRange[] {
+  const lines = code.split("\n");
+  const ranges: CodeRange[] = [];
+
+  // Escape special regex characters if pattern is a string
+  const regex =
+    typeof pattern === "string"
+      ? new RegExp(pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g")
+      : new RegExp(pattern.source, "g");
+
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+    const line = lines[lineIndex];
+    let match: RegExpExecArray | null;
+
+    while ((match = regex.exec(line)) !== null) {
+      const startCol = match.index;
+      const endCol = startCol + match[0].length;
+
+      ranges.push([
+        [lineIndex, startCol],
+        [lineIndex, endCol],
+      ]);
+
+      if (limit !== undefined && ranges.length >= limit) {
+        return ranges;
+      }
+
+      // Prevent infinite loop for zero-length matches
+      if (match[0].length === 0) {
+        regex.lastIndex++;
+      }
+    }
+
+    // Reset regex for next line
+    regex.lastIndex = 0;
+  }
+
+  return ranges;
+}
