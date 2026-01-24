@@ -32,5 +32,10 @@
     "remotion": "^4.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@codemirror/language": "^6.12.1",
+    "@lezer/highlight": "^1.2.3",
+    "@lezer/javascript": "^1.5.4"
   }
 }
